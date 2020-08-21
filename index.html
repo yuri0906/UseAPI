@@ -1,14 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-      <meta charset="UTF-8" />
-      <title>文章要約</title>
-  </head>
-  <body>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>文章要約</title>
+</head>
+<body>
+    <div id="app">
+        <p>要約したい文章を入力してください</p>
+        <textarea class="sentences" rows="10" cols="50"></textarea>
+        <button v-on:click="showMessage">要約</button> 
+        <p>{{ summary }}</p>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <textarea id="sentence" rows="4" cols="40"></textarea>
-    <input id="btn" type="submit" value="送信">
-    <script src="index.js"> </script>
-    <p id="summarized"></p>
-  </body>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="index.js"></script>
+</body>
 </html>
