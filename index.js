@@ -6,7 +6,7 @@ new Vue({
         };
     },
     methods: {
-        showMessage: function () {
+        showSummary: function () {
             const url = 'https://api.a3rt.recruit-tech.co.jp/text_summarization/v1';
             const apikey = 'DZZftGjQWTvlOiUcrmHoyvwENpdYIb3n';
             var params = new URLSearchParams();
