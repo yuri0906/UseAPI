@@ -6,13 +6,24 @@
 </head>
 <body>
     <div id="app">
+
+        <div id="components-demo">
+            <button-counter></button-counter>
+        </div>
+        <p>言語を選択してください</p>
+        <select id="language">
+            <option value="ja">日本語</option>
+            <option value="en">英語</option>
+        </select>
+        
         <p>要約したい文章を入力してください</p>
         <textarea class="sentences" rows="10" cols="50"></textarea>
-        <button v-on:click="showMessage">要約</button> 
+        <button v-on:click="showSummary">要約</button> 
         <p>{{ summary }}</p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/vue-select@latest"></script>
     <script src="index.js"></script>
 </body>
 </html>
