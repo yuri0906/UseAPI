@@ -9,7 +9,7 @@ var app = new Vue({
     methods: {
         showSummary: function () {
             const url = 'https://api.a3rt.recruit-tech.co.jp/text_summarization/v1';
-            const apikey = 'DZZftGjQWTvlOiUcrmHoyvwENpdYIb3n';
+            const apikey = 'XXXXXXXXXXXXXXX';
             var params = new URLSearchParams();
             params.append("apikey",apikey);
             params.append("sentences", document.querySelector('textarea').value);
