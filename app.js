@@ -1,23 +1,20 @@
-var http = require('http');
-var html = require('fs').readFileSync('./index.html');
-const url = 'https://api.a3rt.recruit-tech.co.jp/text_summarization/v1';
-const apikey = 'XXXXXXXXXXXX';
+var http = require('http');   
+var fs = require("fs");         
+var url = require("url");
+ 
+var server = http.createServer();    
+server.on("request", doRequest).listen(8080, '127.0.0.1');
+console.log("server runnnig");
 
-var server = http.createServer(function(request, response) { 
-  response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});
-  
-    if(request.method === 'POST') {
-        //ここに処理を記述する
-    }
-  response.end(html);
-})
+function doRequest(req, res){
+  fs.readFile('./index.html', 'UTF-8', function(err, data){
+    res.setHeader('Content-Type', 'text/html');
+    res.write(data);
+    res.end();
+  });
+}
 
-server.listen(8080);
-
-//以下単体でAPIを叩く関数
-/*
 function showSummary(sentences){
-  var request = require('request');
   var options = {
     uri: url,
     json: true,
@@ -34,4 +31,3 @@ function showSummary(sentences){
      return body.summary[0]; 
   }); 
 };
-*/
