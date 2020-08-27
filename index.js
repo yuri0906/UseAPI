@@ -1,5 +1,5 @@
 const url = 'https://api.a3rt.recruit-tech.co.jp/text_summarization/v1';
-const apikey = 'DZZftGjQWTvlOiUcrmHoyvwENpdYIb3n';
+const apikey = 'XXXXXXXXXXXXXXXXXX';
 
 var button = document.getElementById("btn");
 
