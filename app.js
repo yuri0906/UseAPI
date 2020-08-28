@@ -14,6 +14,7 @@ function doRequest(req, res){
   });
 }
 
+/*
 function showSummary(sentences){
   var options = {
     uri: url,
@@ -31,3 +32,4 @@ function showSummary(sentences){
      return body.summary[0]; 
   }); 
 };
+*/

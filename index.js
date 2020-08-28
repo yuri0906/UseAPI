@@ -1,5 +1,5 @@
 const url = 'https://api.a3rt.recruit-tech.co.jp/text_summarization/v1';
-const apikey = 'XXXXXXXXXXXXXXXXXXXXXX';
+const apikey = 'XXXXXXXXXXXXXXXXXXXX';
 
 const button = document.getElementById("btn");
 
@@ -9,16 +9,17 @@ button.addEventListener("click", event => {
     const sentence = document.getElementById("sentence").value; //入力文章を取得
     const linenumber = parseInt(document.getElementById("linenumber").value); //要約文章数を指定
 
+
     //言語によって句読点分岐
     switch (lang){
         case "ja":
           separation = "。";
           break;
         case "en":
-            separation = ".";
+          separation = ".";
           break;
         default:
-            console.log('言語を選択してください');
+          document.getElementById("summarized").innerHTML = "言語を選択してください";
       }
 
     const params = new URLSearchParams(); //パラメータを設定

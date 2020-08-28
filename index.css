@@ -1,11 +1,13 @@
 body {
     margin: 0;
+    background-color: #FFDBC9;
  } 
 
 header {
     font-size : 25px;
     color: white ;
     background-color: #000033; 
+    text-align: center;
 }
 
 #title {
